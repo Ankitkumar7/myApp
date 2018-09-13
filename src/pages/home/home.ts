@@ -6,7 +6,12 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  public event = {
+    month: '1990-02-19',
+    timeStarts: '07:43',
+    timeEnds: '1990-02-20'
+  }
+  myDate: String = new Date().toISOString();
   constructor(public navCtrl: NavController) {
 
   }

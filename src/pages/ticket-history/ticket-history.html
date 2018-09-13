@@ -1,0 +1,115 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Net To Pay</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card>
+      <ion-card-header >
+      <P class="centre-text"><b><ion-icon name="person"></ion-icon> &nbsp;USERID: ANKITKR</b></P>
+      <hr>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-list>
+              <ion-item>
+                <ion-label>Game List</ion-label>
+                <ion-select [(ngModel)]="gameType" interface="popover">
+                  <ion-option value="faridabadNight">FARIDABAD NIGHT</ion-option>
+                  <ion-option value="n64">Nintendo64</ion-option>
+                  <ion-option value="ps">PlayStation</ion-option>
+                  <ion-option value="genesis">Sega Genesis</ion-option>
+                  <ion-option value="saturn">Sega Saturn</ion-option>
+                  <ion-option value="snes">SNES</ion-option>
+                </ion-select>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Draw Date</ion-label>
+                  <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+                </ion-item>
+                <p class="centre-text">
+                    <button ion-button color="primary"  full round>
+                        SEARCH
+                    </button>
+                  </p>
+              <hr>
+
+            </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="type">
+          <ion-segment-button value="jodi">
+            JODI
+          </ion-segment-button>
+          <ion-segment-button value="andar">
+            ANDAR
+          </ion-segment-button>
+          <ion-segment-button value="bahar">
+            BAHAR
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    <div [ngSwitch]="type">
+        <ion-list *ngSwitchCase="'jodi'">
+          <ion-item>
+
+            <h2>Ruby</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Oscar</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Zoey</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Otto</h2>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'andar'">
+          <ion-item>
+
+            <h2>Luna</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Milo</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Bandit</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Nala</h2>
+          </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'bahar'">
+          <ion-item>
+
+            <h2>Daffy</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Huey</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Dewey</h2>
+          </ion-item>
+          <ion-item>
+
+            <h2>Louie</h2>
+          </ion-item>
+        </ion-list>
+      </div>
+
+  </ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Net To Pay</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card>
+      <ion-card-header >
+      <P class="centre-text"><b><ion-icon name="person"></ion-icon> &nbsp;USERID: ANKITKR</b></P>
+      <hr>
+      </ion-card-header>
+      <ion-card-content>
+       <ion-list>
+        <ion-item>
+          <ion-label>From Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+        <hr>
+        <ion-item>
+          <ion-label>To Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+        <p class="centre-text">
+            <button ion-button color="primary"  round>
+                SEARCH
+            </button>
+          </p>
+      <hr>
+      <p class="centre-text">
+          <button ion-button color="primary" clear full round>
+              NET TO PAY
+          </button>
+        </p>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

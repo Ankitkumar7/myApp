@@ -1,0 +1,62 @@
+<!--
+  Generated template for the PlayGamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>Play Game
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content n0-padding>
+    <ion-card>
+
+
+        <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="dark" icon-start>
+              {{currentDate}}
+            </button>
+          </ion-col>
+
+          <ion-col text-right>
+            <button ion-button clear small color="dark" icon-start>
+              {{currentTime}}
+            </button>
+          </ion-col>
+        </ion-row>
+        <hr>
+        <ion-item-group>
+            <ion-item><b>Username :</b> Ankitkr</ion-item>
+            <hr>
+            <ion-item><b>User Balance</b> : 0.00</ion-item>
+            <hr>
+            <ion-item><b>Time To Booking</b> {{currentTime}}</ion-item>
+            <hr>
+            <ion-item>
+              <ion-label>Advance Game List</ion-label>
+              <ion-select [(ngModel)]="agList">
+                  <ion-option value="DLSUPPER">DL SUPER (10-09-2018 11:40AM)</ion-option>
+                  <ion-option value="n64">Nintendo64</ion-option>
+                  <ion-option value="ps">PlayStation</ion-option>
+                  <ion-option value="genesis">Sega Genesis</ion-option>
+                  <ion-option value="saturn">Sega Saturn</ion-option>
+                  <ion-option value="snes">SNES</ion-option>
+                </ion-select>
+            </ion-item>
+            <hr>
+            <ion-item><b>Current Game : </b>{{agList}}</ion-item>
+          </ion-item-group>
+          <hr>
+          <button ion-button color="primary" clear full round (click)="openJodiPage();">
+              Next
+          </button>
+      </ion-card>
+</ion-content>

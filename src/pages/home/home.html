@@ -8,11 +8,36 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-card>
+    <ion-card-header >
+    <P class="centre-text"><b><ion-icon name="person"></ion-icon> &nbsp;USERID: ANKITKR</b></P>
+    <hr>
+    </ion-card-header>
+    <ion-card-content>
+     <p class="centre-text"><ion-icon name="cash"></ion-icon>&nbsp; My balance : ₹00.00</p>
+     <ion-item-divider></ion-item-divider>
+     <ion-list>
+      <ion-item>
+        <ion-label>From Date</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <hr>
+      <ion-item>
+        <ion-label>To Date</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+      <p class="centre-text">
+          <button ion-button color="primary"  round>
+              SEARCH
+          </button>
+        </p>
+    <hr>
+    <p class="centre-text">
+        <button ion-button color="primary" clear full round>
+            BALANCE  TRANSFER SUMMARY
+        </button>
+      </p>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
