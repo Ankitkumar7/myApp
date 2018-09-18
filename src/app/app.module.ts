@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,6 +14,8 @@ import { TicketHistoryPage } from '../pages/ticket-history/ticket-history';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PlayGamePage } from '../pages/play-game/play-game';
 import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
+import { WheelSelector } from '@ionic-native/wheel-selector';
+import { MultiPickerModule } from 'ion-multi-picker';
 
 
 @NgModule({
@@ -28,6 +31,8 @@ import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    MultiPickerModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -44,6 +49,7 @@ import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
   providers: [
     StatusBar,
     SplashScreen,
+    WheelSelector,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

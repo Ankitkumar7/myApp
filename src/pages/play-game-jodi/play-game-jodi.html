@@ -1,18 +1,103 @@
-<!--
-  Generated template for the PlayGameJodiPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>JODI</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding>
+<ion-content no-padding>
+<!-- <ion-slides> -->
+  <!-- <ion-slide> -->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-md-12 *ngFor="let i of count">
+            <ion-chip #chip1 (click)="getFirstLoteryNumber(i)">
+                <ion-icon>{{i}}</ion-icon>
+            </ion-chip>
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+        <hr>
+        <ion-grid>
+            <ion-row>
 
+              <ion-col>
+                  <ion-chip>
+                  <ion-icon  *ngIf="this.getLotteryData.one" >1</ion-icon>
+                    <ion-icon color="secondary" *ngIf="this.getLotteryData.one">{{this.getLotteryData.one}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.two" >2</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.two">{{this.getLotteryData.two}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.three">3</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.three">{{this.getLotteryData.three}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.four" >4</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.four">{{this.getLotteryData.four}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.five" >5</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.five">{{this.getLotteryData.five}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.six" >6</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.six">{{this.getLotteryData.six}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.seven" >7</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.seven">{{this.getLotteryData.seven}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.eight">8</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.eight">{{this.getLotteryData.eight}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.nine" >9</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.nine">{{this.getLotteryData.nine}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              <ion-col>
+                  <ion-chip >
+                  <ion-icon  *ngIf="this.getLotteryData.ten" >10</ion-icon>
+
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.ten">{{this.getLotteryData.ten}}</ion-icon>
+                  </ion-chip>
+              </ion-col>
+              </ion-row>
+              </ion-grid>
+  <!-- </ion-slide> -->
+  <!-- <ion-slide>
+    <ion-grid>
+      <ion-row>
+      <ion-col *ngFor="let j of countFromFifty">
+        <ion-chip #chip1 (click)="getFirstLoteryNumber(j)">
+          <ion-icon >{{j}}</ion-icon>
+      </ion-chip>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-slide> -->
+<!-- </ion-slides> -->
 </ion-content>

@@ -9,6 +9,7 @@ import { NetToPayPage } from '../pages/net-to-pay/net-to-pay';
 import { TicketHistoryPage } from '../pages/ticket-history/ticket-history';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PlayGamePage } from '../pages/play-game/play-game';
+import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
 
 @Component({
   templateUrl: 'app.html'
