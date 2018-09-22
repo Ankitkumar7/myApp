@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -13,14 +15,21 @@ export class HomePage {
   }
   myDate: String = new Date().toISOString();
   userBalance: any;
-  constructor(public navCtrl: NavController,public http: HttpClient) {
-    this.getUserBalance()
+  username: any ;
+  constructor(public storage: Storage,public navCtrl: NavController,public http: HttpClient) {
+    storage.get('username').then((val) => {
+      this.username = val;
+      this.getUserBalance()
+
+
+   });
 
   }
 
   getUserBalance() {
+    console.log(this.username)
     return new Promise(resolve => {
-      this.http.get('http://127.0.0.1:8000/getbalance/abhishek/').subscribe(data => {
+      this.http.get('http://serverside.pythonanywhere.com/getbalance/'+this.username+'/').subscribe(data => {
         this.userBalance = data[0]['balance']
       console.log(this.userBalance)
 

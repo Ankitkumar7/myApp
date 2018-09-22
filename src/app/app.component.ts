@@ -10,19 +10,28 @@ import { TicketHistoryPage } from '../pages/ticket-history/ticket-history';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { PlayGamePage } from '../pages/play-game/play-game';
 import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
+import { LoginPage } from '../pages/login/login';
+import { Storage } from '@ionic/storage';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = HomePage;
-
+  rootPage: any;
+  token: any;
   pages: Array<{title: string, component: any}>;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public storage: Storage, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
+    storage.get('token').then((val) => {
+       this.token = val;
+       if(this.token) {
+         this.rootPage = HomePage
+       }
+       else{
+         this.rootPage = LoginPage
+       }
+    });
 
     // used for an example of ngFor and navigation
     this.pages = [

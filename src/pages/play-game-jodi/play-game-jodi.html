@@ -6,10 +6,26 @@
     <ion-grid>
       <ion-row>
         <ion-col col-md-12 *ngFor="let i of count">
-            <ion-chip #chip1 (click)="getFirstLoteryNumber(i)">
+            <ion-chip  #chip1 (click)="getFirstLoteryNumber(i)">
                 <ion-icon>{{i}}</ion-icon>
             </ion-chip>
         </ion-col>
+        <ion-col col-md-12 >
+          <ion-chip #chip1 color="danger">
+              <ion-icon></ion-icon>
+          </ion-chip>
+      </ion-col>
+      <ion-col col-md-12 >
+        <ion-chip #chip1 color="danger">
+            <ion-icon></ion-icon>
+        </ion-chip>
+    </ion-col>
+    <ion-col col-md-12 >
+      <ion-chip #chip1 color="danger">
+          <ion-icon></ion-icon>
+      </ion-chip>
+  </ion-col>
+
         </ion-row>
         </ion-grid>
         <hr>
@@ -85,19 +101,547 @@
                       <ion-icon color="secondary" *ngIf="this.getLotteryData.ten">{{this.getLotteryData.ten}}</ion-icon>
                   </ion-chip>
               </ion-col>
-              </ion-row>
-              </ion-grid>
-  <!-- </ion-slide> -->
-  <!-- <ion-slide>
-    <ion-grid>
-      <ion-row>
-      <ion-col *ngFor="let j of countFromFifty">
-        <ion-chip #chip1 (click)="getFirstLoteryNumber(j)">
-          <ion-icon >{{j}}</ion-icon>
-      </ion-chip>
+              <ion-col>
+                <ion-chip >
+                <ion-icon  *ngIf="this.getLotteryData.eleven" >11</ion-icon>
+                    <ion-icon color="secondary" *ngIf="this.getLotteryData.eleven">{{this.getLotteryData.eleven}}</ion-icon>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+              <ion-chip >
+              <ion-icon  *ngIf="this.getLotteryData.tweleve" >12</ion-icon>
+                  <ion-icon color="secondary" *ngIf="this.getLotteryData.tweleve">{{this.getLotteryData.tweleve}}</ion-icon>
+              </ion-chip>
+          </ion-col>
+          <ion-col>
+            <ion-chip >
+            <ion-icon  *ngIf="this.getLotteryData.thirteen" >13</ion-icon>
+                <ion-icon color="secondary" *ngIf="this.getLotteryData.thirteen">{{this.getLotteryData.thirteen}}</ion-icon>
+            </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip >
+          <ion-icon  *ngIf="this.getLotteryData.fourteen" >14</ion-icon>
+              <ion-icon color="secondary" *ngIf="this.getLotteryData.fourteen">{{this.getLotteryData.fourteen}}</ion-icon>
+          </ion-chip>
       </ion-col>
-    </ion-row>
-    </ion-grid>
-  </ion-slide> -->
-<!-- </ion-slides> -->
+      <ion-col>
+        <ion-chip >
+        <ion-icon  *ngIf="this.getLotteryData.fifteen" >15</ion-icon>
+            <ion-icon color="secondary" *ngIf="this.getLotteryData.fifteen">{{this.getLotteryData.fifteen}}</ion-icon>
+        </ion-chip>
+    </ion-col>
+    <ion-col>
+      <ion-chip >
+      <ion-icon  *ngIf="this.getLotteryData.sixteen" >16</ion-icon>
+          <ion-icon color="secondary" *ngIf="this.getLotteryData.sixteen">{{this.getLotteryData.sixteen}}</ion-icon>
+      </ion-chip>
+  </ion-col>
+  <ion-col>
+    <ion-chip >
+    <ion-icon  *ngIf="this.getLotteryData.seventeen" >17</ion-icon>
+        <ion-icon color="secondary" *ngIf="this.getLotteryData.seventeen">{{this.getLotteryData.seventeen}}</ion-icon>
+    </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip >
+  <ion-icon  *ngIf="this.getLotteryData.eightin" >18</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightin">{{this.getLotteryData.eightin}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip >
+  <ion-icon  *ngIf="this.getLotteryData.nineteen" >19</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nineteen">{{this.getLotteryData.nineteen}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twnty" >20</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twnty">{{this.getLotteryData.twnty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntyone" >21</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntyone">{{this.getLotteryData.twntyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntytwo" >22</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntytwo">{{this.getLotteryData.twntytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntythree" >23</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntythree">{{this.getLotteryData.twntythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntyfour" >24</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntyfour">{{this.getLotteryData.twntyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntyfive" >25</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntyfive">{{this.getLotteryData.twntyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntysix" >26</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntysix">{{this.getLotteryData.twntysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntyseven" >27</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntyseven">{{this.getLotteryData.twntyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntyeight" >28</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntyeight">{{this.getLotteryData.twntyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.twntynine" >29</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.twntynine">{{this.getLotteryData.twntynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrty" >30</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrty">{{this.getLotteryData.thrty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtyone" >31</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtyone">{{this.getLotteryData.thrtyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtytwo" >32</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtytwo">{{this.getLotteryData.thrtytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtythree" >33</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtythree">{{this.getLotteryData.thrtythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtyfour" >34</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtyfour">{{this.getLotteryData.thrtyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtyfive" >35</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtyfive">{{this.getLotteryData.thrtyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtysix" >36</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtysix">{{this.getLotteryData.thrtysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtyseven" >37</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtyseven">{{this.getLotteryData.thrtyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtyeight" >38</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtyeight">{{this.getLotteryData.thrtyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.thrtynine" >39</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.thrtynine">{{this.getLotteryData.thrtynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourty" >40</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourty">{{this.getLotteryData.fourty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtyone" >41</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtyone">{{this.getLotteryData.fourtyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtytwo" >42</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtytwo">{{this.getLotteryData.fourtytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtythree" >43</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtythree">{{this.getLotteryData.fourtythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtyfour" >44</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtyfour">{{this.getLotteryData.fourtyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtyfive" >45</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtyfive">{{this.getLotteryData.fourtyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtysix" >46</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtysix">{{this.getLotteryData.fourtysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtyseven" >47</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtyseven">{{this.getLotteryData.fourtyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtyeight" >48</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtyeight">{{this.getLotteryData.fourtyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fourtynine" >49</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fourtynine">{{this.getLotteryData.fourtynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fifty" >50</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fifty">{{this.getLotteryData.fifty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+                <ion-col>
+                  <ion-chip>
+                  <ion-icon  *ngIf="this.getLotteryData.fiftyone" >51</ion-icon>
+                      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftyone">{{this.getLotteryData.fiftyone}}</ion-icon>
+                  </ion-chip>
+            </ion-col>
+            <ion-col>
+              <ion-chip>
+              <ion-icon  *ngIf="this.getLotteryData.fiftytwo" >52</ion-icon>
+                  <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftytwo">{{this.getLotteryData.fiftytwo}}</ion-icon>
+              </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip>
+          <ion-icon  *ngIf="this.getLotteryData.fiftythree" >53</ion-icon>
+              <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftythree">{{this.getLotteryData.fiftythree}}</ion-icon>
+          </ion-chip>
+    </ion-col>
+    <ion-col>
+      <ion-chip>
+      <ion-icon  *ngIf="this.getLotteryData.fiftyfour" >54</ion-icon>
+          <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftyfour">{{this.getLotteryData.fiftyfour}}</ion-icon>
+      </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fiftyfive" >55</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftyfive">{{this.getLotteryData.fiftyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fiftysix" >56</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftysix">{{this.getLotteryData.fiftysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fiftyseven" >57</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftyseven">{{this.getLotteryData.fiftyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fiftyeight" >58</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftyeight">{{this.getLotteryData.fiftyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.fiftynine" >59</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.fiftynine">{{this.getLotteryData.fiftynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixty" >60</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixty">{{this.getLotteryData.sixty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtyone" >61</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtyone">{{this.getLotteryData.sixtyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtytwo" >62</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtytwo">{{this.getLotteryData.sixtytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtythree" >63</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtythree">{{this.getLotteryData.sixtythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtyfour" >64</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtyfour">{{this.getLotteryData.sixtyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtyfive" >65</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtyfive">{{this.getLotteryData.sixtyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtysix" >66</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtysix">{{this.getLotteryData.sixtysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtyseven" >67</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtyseven">{{this.getLotteryData.sixtyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtyeight" >68</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtyeight">{{this.getLotteryData.sixtyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.sixtynine" >69</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.sixtynine">{{this.getLotteryData.sixtynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventy" >70</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventy">{{this.getLotteryData.seventy}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventyone" >71</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventyone">{{this.getLotteryData.seventyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventytwo" >72</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventytwo">{{this.getLotteryData.seventytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventythree" >73</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventythree">{{this.getLotteryData.seventythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventyfour" >74</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventyfour">{{this.getLotteryData.seventyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventyfive" >75</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventyfive">{{this.getLotteryData.seventyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventysix" >76</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventysix">{{this.getLotteryData.seventysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventyseven" >77</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventyseven">{{this.getLotteryData.seventyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventyeight" >78</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventyseven">{{this.getLotteryData.seventyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.seventynine" >79</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.seventynine">{{this.getLotteryData.seventynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eighty" >80</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eighty">{{this.getLotteryData.eighty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightyone" >81</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightyone">{{this.getLotteryData.eightyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightytwo" >82</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightytwo">{{this.getLotteryData.eightytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightythree" >83</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightythree">{{this.getLotteryData.eightythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightyfour" >84</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightyfour">{{this.getLotteryData.eightyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightyfive" >85</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightyfive">{{this.getLotteryData.eightyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightysix" >86</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightysix">{{this.getLotteryData.eightysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightysevem" >87</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightysevem">{{this.getLotteryData.eightysevem}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightyeight" >88</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightyeight">{{this.getLotteryData.eightyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.eightynine" >89</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.eightynine">{{this.getLotteryData.eightynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.ninty" >90</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.ninty">{{this.getLotteryData.ninty}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintyone" >91</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintyone">{{this.getLotteryData.nintyone}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintytwo" >92</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintytwo">{{this.getLotteryData.nintytwo}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintythree" >93</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintythree">{{this.getLotteryData.nintythree}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintyfour" >94</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintyfour">{{this.getLotteryData.nintyfour}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintyfive" >95</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintyfive">{{this.getLotteryData.nintyfive}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintysix" >96</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintysix">{{this.getLotteryData.nintysix}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintyseven" >97</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintyseven">{{this.getLotteryData.nintyseven}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintyeight" >98</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintyeight">{{this.getLotteryData.nintyeight}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.nintynine" >99</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.nintynine">{{this.getLotteryData.nintynine}}</ion-icon>
+  </ion-chip>
+</ion-col>
+<ion-col>
+  <ion-chip>
+  <ion-icon  *ngIf="this.getLotteryData.hundred" >100</ion-icon>
+      <ion-icon color="secondary" *ngIf="this.getLotteryData.hundred">{{this.getLotteryData.hundred}}</ion-icon>
+  </ion-chip>
+</ion-col>
+</ion-row>
+ </ion-grid>
+<button ion-button full round (click)="goToHarupPage()">Next</button>
 </ion-content>

@@ -106,6 +106,7 @@ export class PlayGameJodiPage {
     eightyfive: '',
     eightysix: '',
     eightysevem: '',
+    eightyeight: '',
     eightynine: '',
     ninty: '',
     nintyone: '',
@@ -117,11 +118,11 @@ export class PlayGameJodiPage {
     nintyseven: '',
     nintyeight: '',
     nintynine: '',
-    ninty100: '',
+    hundred: '',
   }]
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private selector: WheelSelector) {
-      for(let i = 1 ; i<= 48 ; i++){
+      for(let i = 1 ; i<= 100 ; i++){
         this.count.push(i)
       }
       for(let index = 51; index <= 100; index++){
@@ -292,126 +293,257 @@ export class PlayGameJodiPage {
         if(id === 10){
           this.getLotteryData.ten = result[0].description
         }
-        if(id === '11'){
+        if(id === 11){
           this.getLotteryData.eleven = result[0].description
         }
-        if(id === '12'){
+        if(id === 12){
           this.getLotteryData.tweleve = result[0].description
         }
-        if(id === '13'){
+        if(id === 13){
           this.getLotteryData.thirteen = result[0].description
         }
-        if(id === '14'){
+        if(id === 14){
           this.getLotteryData.fourteen = result[0].description
         }
-        if(id === '15'){
+        if(id === 15){
           this.getLotteryData.fifteen = result[0].description
         }
-        if(id === '16'){
+        if(id === 16){
           this.getLotteryData.sixteen = result[0].description
         }
-        if(id === '17'){
+        if(id === 17){
           this.getLotteryData.seventeen = result[0].description
         }
-        if(id === '18'){
+        if(id === 18){
           this.getLotteryData.eightin = result[0].description
         }
-        if(id === '19'){
+        if(id === 19){
           this.getLotteryData.nineteen = result[0].description
         }
-        if(id === '20'){
+        if(id === 20){
           this.getLotteryData.twnty = result[0].description
         }
-        if(id === '21'){
+        if(id === 21){
           this.getLotteryData.twntyone = result[0].description
         }
-        if(id === '22'){
+        if(id === 22){
           this.getLotteryData.twntytwo = result[0].description
         }
-        if(id === '23'){
+        if(id ===  23 ){
           this.getLotteryData.twntythree = result[0].description
         }
-        if(id === '24'){
+        if(id ===  24 ){
           this.getLotteryData.twntyfour = result[0].description
         }
-        if(id === '25'){
+        if(id ===  25 ){
           this.getLotteryData.twntyfive = result[0].description
         }
-        if(id === '26'){
+        if(id ===  26 ){
           this.getLotteryData.twntysix = result[0].description
         }
-        if(id === '27'){
+        if(id ===  27 ){
           this.getLotteryData.twntyseven = result[0].description
         }
-        if(id === '28'){
+        if(id ===  28 ){
           this.getLotteryData.twntyeight = result[0].description
         }
-        if(id === '29'){
+        if(id ===  29 ){
           this.getLotteryData.twntynine = result[0].description
         }
-        if(id === '30'){
+        if(id ===  30 ){
           this.getLotteryData.thrty = result[0].description
         }
-        if(id === '31'){
+        if(id ===  31 ){
           this.getLotteryData.thrtyone = result[0].description
         }
-        if(id === '32'){
+        if(id ===  32 ){
           this.getLotteryData.thrtytwo = result[0].description
         }
-        if(id === '33'){
+        if(id ===  33 ){
           this.getLotteryData.thrtythree = result[0].description
         }
-        if(id === '34'){
+        if(id ===  34 ){
           this.getLotteryData.thrtyfour = result[0].description
         }
-        if(id === '35'){
+        if(id ===  35 ){
           this.getLotteryData.thrtyfive = result[0].description
         }
-        if(id === '36'){
+        if(id ===  36 ){
           this.getLotteryData.thrtysix = result[0].description
         }
-        if(id === '30'){
+        if(id ===  30 ){
           this.getLotteryData.thrtyseven = result[0].description
         }
-        if(id === '30'){
+        if(id ===  30 ){
           this.getLotteryData.thrtyeight = result[0].description
         }
-        if(id === '39'){
+        if(id ===  39 ){
           this.getLotteryData.thrtynine = result[0].description
         }
-        if(id === '40'){
+        if(id ===  40 ){
           this.getLotteryData.fourty = result[0].description
         }
-        if(id === '41'){
+        if(id ===  41 ){
           this.getLotteryData.fourtyone = result[0].description
         }
-        if(id === '42'){
+        if(id ===  42 ){
           this.getLotteryData.fourtytwo = result[0].description
         }
-        if(id === '43'){
+        if(id ===  43 ){
           this.getLotteryData.fourtythree = result[0].description
         }
-        if(id === '44'){
+        if(id ===  44 ){
           this.getLotteryData.fourtyfour = result[0].description
         }
-        if(id === '45'){
+        if(id ===  45 ){
           this.getLotteryData.fourtyfive = result[0].description
         }
-        if(id === '46'){
+        if(id ===  46 ){
           this.getLotteryData.fourtysix = result[0].description
         }
-        if(id === '47'){
+        if(id ===  47 ){
           this.getLotteryData.fourtyseven = result[0].description
         }
-        if(id === '48'){
+        if(id ===  48 ){
           this.getLotteryData.fourtyeight = result[0].description
         }
-        if(id === '49'){
+        if(id ===  49 ){
           this.getLotteryData.fourtynine = result[0].description
         }
-        if(id === '50'){
+        if(id ===  50 ){
           this.getLotteryData.fifty = result[0].description
         }
+        if(id ===  51 ){
+          this.getLotteryData.fiftyone = result[0].description
+        }
+        if(id ===  52 ){
+          this.getLotteryData.fiftytwo = result[0].description
+        }if(id ===  53 ){
+          this.getLotteryData.fiftythree = result[0].description
+        }if(id ===  54 ){
+          this.getLotteryData.fiftyfour = result[0].description
+        }if(id ===  55 ){
+          this.getLotteryData.fiftyfive = result[0].description
+        }if(id ===  56 ){
+          this.getLotteryData.fiftysix = result[0].description
+        }if(id ===  57 ){
+          this.getLotteryData.fiftyseven = result[0].description
+        }if(id ===  58 ){
+          this.getLotteryData.fiftyeight = result[0].description
+        }if(id ===  59 ){
+          this.getLotteryData.fiftynine = result[0].description
+        }if(id ===  60 ){
+          this.getLotteryData.sixty = result[0].description
+        }
+        if(id ===  61 ){
+          this.getLotteryData.sixtyone = result[0].description
+        }
+        if(id ===  62 ){
+          this.getLotteryData.sixtytwo = result[0].description
+        }
+        if(id ===  63 ){
+          this.getLotteryData.sixtythree = result[0].description
+        }
+        if(id ===  64 ){
+          this.getLotteryData.sixtyfour = result[0].description
+        }
+        if(id ===  65 ){
+          this.getLotteryData.sixtyfive = result[0].description
+        }
+        if(id ===  66 ){
+          this.getLotteryData.sixtysix = result[0].description
+        }
+        if(id ===  67 ){
+          this.getLotteryData.sixtyseven = result[0].description
+        }
+        if(id ===  68 ){
+          this.getLotteryData.sixtynine = result[0].description
+        }
+        if(id ===  69 ){
+          this.getLotteryData.sixtynine = result[0].description
+        }
+        if(id ===  70 ){
+          this.getLotteryData.seventy = result[0].description
+        }if(id ===  71 ){
+          this.getLotteryData.seventyone = result[0].description
+        }if(id ===  72 ){
+          this.getLotteryData.seventytwo = result[0].description
+        }if(id ===  73 ){
+          this.getLotteryData.seventythree = result[0].description
+        }if(id ===  74 ){
+          this.getLotteryData.seventyfour = result[0].description
+        }if(id ===  75 ){
+          this.getLotteryData.seventyfive = result[0].description
+        }if(id ===  76 ){
+          this.getLotteryData.seventysix = result[0].description
+        }
+        if(id ===  77 ){
+          this.getLotteryData.seventyseven = result[0].description
+        }
+        if(id ===  78 ){
+          this.getLotteryData.seventyeight = result[0].description
+        }
+        if(id ===  79 ){
+          this.getLotteryData.seventynine = result[0].description
+        }
+        if(id ===  80 ){
+          this.getLotteryData.eighty = result[0].description
+        }
+        if(id ===  81 ){
+          this.getLotteryData.eightyone = result[0].description
+        }
+        if(id ===  82 ){
+          this.getLotteryData.eightytwo = result[0].description
+        }
+        if(id ===  83 ){
+          this.getLotteryData.eightythree = result[0].description
+        }
+        if(id ===  84 ){
+          this.getLotteryData.eightyfour = result[0].description
+        }
+        if(id ===  85 ){
+          this.getLotteryData.eightyfive = result[0].description
+        }
+        if(id ===  86 ){
+          this.getLotteryData.eightysix = result[0].description
+        }
+        if(id ===  87 ){
+          this.getLotteryData.eightysevem = result[0].description
+        }
+        if(id ===  88 ){
+          this.getLotteryData.eightyeight = result[0].description
+        }
+        if(id ===  89 ){
+          this.getLotteryData.eightynine = result[0].description
+        }
+        if(id ===  90 ){
+          this.getLotteryData.ninty = result[0].description
+        }
+        if(id ===  91 ){
+          this.getLotteryData.nintyone = result[0].description
+        }
+        if(id ===  92 ){
+          this.getLotteryData.nintytwo = result[0].description
+        }
+        if(id ===  93 ){
+          this.getLotteryData.nintythree = result[0].description
+        } if(id ===  94 ){
+          this.getLotteryData.nintyfour = result[0].description
+        } if(id ===  95 ){
+          this.getLotteryData.nintyfive = result[0].description
+        } if(id ===  96 ){
+          this.getLotteryData.nintysix = result[0].description
+        } if(id ===  97 ){
+          this.getLotteryData.nintyseven = result[0].description
+        } if(id ===  98 ){
+          this.getLotteryData.nintyeight = result[0].description
+        } if(id ===  99 ){
+          this.getLotteryData.nintynine = result[0].description
+        } if(id ===  100 ){
+          this.getLotteryData.hundred = result[0].description
+        }
+
+
         console.log(result[0].description);
       },
       err => console.log('Error: ', err)
@@ -433,6 +565,8 @@ export class PlayGameJodiPage {
   }
   check(){
   console.log(this.getLotteryData)
+  }
+  goToHarupPage(){
   }
 
 }
