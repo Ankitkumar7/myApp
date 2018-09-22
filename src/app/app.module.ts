@@ -19,6 +19,7 @@ import { WheelSelector } from '@ionic-native/wheel-selector';
 import { MultiPickerModule } from 'ion-multi-picker';
 import { LoginPage } from '../pages/login/login';
 import { IonicStorageModule } from '@ionic/storage';
+import { RegisterPage } from '../pages/register/register';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { IonicStorageModule } from '@ionic/storage';
     PlayGamePage,
     PlayGameJodiPage,
     LoginPage,
+    RegisterPage,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,8 @@ import { IonicStorageModule } from '@ionic/storage';
     DashboardPage,
     PlayGamePage,
     PlayGameJodiPage,
-    LoginPage
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

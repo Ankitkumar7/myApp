@@ -30,11 +30,16 @@ export class HomePage {
     console.log(this.username)
     return new Promise(resolve => {
       this.http.get('http://serverside.pythonanywhere.com/getbalance/'+this.username+'/').subscribe(data => {
-        this.userBalance = data[0]['balance']
-      console.log(this.userBalance)
+      try{
+      this.userBalance = data[0]['balance']
+
+      }catch(e){
+        this.userBalance = 0;
+      }
+
 
       }, err => {
-        console.log(err);
+        this.userBalance = 0;
       });
     });
   }

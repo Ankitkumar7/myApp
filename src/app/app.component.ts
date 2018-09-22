@@ -44,7 +44,7 @@ export class MyApp {
       { title: 'Balance History', component: ListPage },
       { title: 'Resullt Chart', component: ListPage },
       { title: 'Change Password', component: ListPage },
-      { title: 'Logout', component: ListPage }
+      { title: 'Logout', component: LoginPage }
 
     ];
 
