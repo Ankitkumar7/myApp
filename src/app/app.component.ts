@@ -12,6 +12,8 @@ import { PlayGamePage } from '../pages/play-game/play-game';
 import { PlayGameJodiPage } from '../pages/play-game-jodi/play-game-jodi';
 import { LoginPage } from '../pages/login/login';
 import { Storage } from '@ionic/storage';
+import { SummaryPage } from '../pages/summary/summary';
+import { UpdatePage } from '../pages/update/update';
 
 @Component({
   templateUrl: 'app.html'
@@ -44,7 +46,9 @@ export class MyApp {
       { title: 'Balance History', component: ListPage },
       { title: 'Resullt Chart', component: ListPage },
       { title: 'Change Password', component: ListPage },
-      { title: 'Logout', component: LoginPage }
+      { title: 'Logout', component: LoginPage },
+      { title: 'Summary', component: SummaryPage },
+      { title: 'Balance', component: UpdatePage },
 
     ];
 

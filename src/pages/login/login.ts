@@ -62,7 +62,7 @@ export class LoginPage {
 
   login(){
     console.log(this.userName)
-    console.log(this.userName)
+    console.log(this.password)
     var headers = new Headers();
     this.http.post('http://serverside.pythonanywhere.com/login/',
         {
