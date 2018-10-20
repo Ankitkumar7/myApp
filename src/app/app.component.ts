@@ -14,6 +14,7 @@ import { LoginPage } from '../pages/login/login';
 import { Storage } from '@ionic/storage';
 import { SummaryPage } from '../pages/summary/summary';
 import { UpdatePage } from '../pages/update/update';
+import { AdminDashboardPage } from '../pages/admin-dashboard/admin-dashboard';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,6 +24,8 @@ export class MyApp {
   rootPage: any;
   token: any;
   pages: Array<{title: string, component: any}>;
+  adminPage: Array<{title: string, Component: any}>;
+  userName: any;
   constructor(public storage: Storage, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
     storage.get('token').then((val) => {
@@ -35,9 +38,14 @@ export class MyApp {
        }
     });
 
+    storage.get('username').then((val) => {
+      this.userName = val;
+   });
+
+
     // used for an example of ngFor and navigation
     this.pages = [
-      // { title: 'Home', component: HomePage },
+      { title: 'Home', component: HomePage },
       {title: 'Dashboard', component: DashboardPage},
       { title: 'Play Game', component: PlayGamePage },
       { title: 'Ticket History', component: TicketHistoryPage },
@@ -52,6 +60,13 @@ export class MyApp {
 
     ];
 
+    if(this.userName === 'Euros') {
+      this.adminPage = [
+        {title: 'Admin Dashboard', Component: AdminDashboardPage}
+    ]
+    }
+
+
   }
 
   initializeApp() {
@@ -63,9 +78,13 @@ export class MyApp {
     });
   }
 
+
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
+    this.nav.setRoot(page.component);
+  }
+  openAdminPage(page) {
     this.nav.setRoot(page.component);
   }
 }

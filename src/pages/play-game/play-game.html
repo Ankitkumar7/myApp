@@ -36,7 +36,7 @@
         <ion-item-group>
             <ion-item><b>Username :</b> Ankitkr</ion-item>
             <hr>
-            <ion-item><b>User Balance</b> : 0.00</ion-item>
+            <ion-item><b>User Balance</b> : ₹{{userBalance}}</ion-item>
             <hr>
             <ion-item><b>Time To Booking</b> {{currentTime}}</ion-item>
             <hr>
@@ -55,7 +55,7 @@
             <ion-item><b>Current Game : </b>{{agList}}</ion-item>
           </ion-item-group>
           <hr>
-          <button ion-button color="primary" clear full round (click)="openJodiPage();">
+          <button ion-button [disabled]="userBalance < 500" color="primary" clear full round (click)="openJodiPage();">
               Next
           </button>
       </ion-card>

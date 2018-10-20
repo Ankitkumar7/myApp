@@ -20,8 +20,6 @@ export class HomePage {
     storage.get('username').then((val) => {
       this.username = val;
       this.getUserBalance()
-
-
    });
 
   }
@@ -36,8 +34,6 @@ export class HomePage {
       }catch(e){
         this.userBalance = 0;
       }
-
-
       }, err => {
         this.userBalance = 0;
       });

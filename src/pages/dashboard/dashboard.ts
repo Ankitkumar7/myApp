@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the DashboardPage page.
@@ -16,8 +17,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardPage {
   userBalance: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+  username: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public storage: Storage) {
     this.getUserBalance()
+    storage.get('username').then((val) => {
+      this.username = val;
+      this.getUserBalance()
+   });
   }
 
   ionViewDidLoad() {
