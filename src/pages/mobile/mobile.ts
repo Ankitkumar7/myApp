@@ -17,9 +17,12 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
   templateUrl: 'mobile.html',
 })
 export class MobilePage {
-  mobile: any;
-
+  mobileNumber: any;
+  username: any;
   constructor(public toastr: ToastController,public storage: Storage,public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    storage.get('username').then((val) => {
+      this.username = val;
+   });
   }
 
 
@@ -54,21 +57,21 @@ export class MobilePage {
     toast.present();
   }
 
-  register(){
+  mobilenumber(){
     var headers = new Headers();
-    this.http.post('http://serverside.pythonanywhere.com/api/users',
+    this.http.post('http://serverside.pythonanywhere.com/addmobile',
         {
-          username: this.mobile
+          user: this.username,
+          mobileNumber: this.mobileNumber
 
         }, {
           headers: headers
         })
-      .map((res: Response) => res.json())
+      .map((res: Response) => res.json(),
+    )
       .subscribe(data => (console.log(data)),
         error => this.LoginErrorMessage(), // if server status null , show alert message
         () => this.successMessage());
-    this.navCtrl.push(LoginPage)
-
   }
 
 }

@@ -26,6 +26,8 @@ export class LoginPage {
   password: any;
 
   constructor(public toastr: ToastController,public storage: Storage,public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+  this.storage.remove('username')
+  this.storage.remove('token')
   }
 
   ionViewDidLoad() {
@@ -61,6 +63,7 @@ export class LoginPage {
   }
 
   login(){
+
     console.log(this.userName)
     console.log(this.password)
     var headers = new Headers();

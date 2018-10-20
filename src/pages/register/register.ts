@@ -42,7 +42,7 @@ export class RegisterPage {
       duration: 3000,
       position: 'top'
     });
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.setRoot(MobilePage);
 
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
@@ -75,11 +75,11 @@ export class RegisterPage {
         }, {
           headers: headers
         })
-      .map((res: Response) => res.json())
+      .map((res: Response) => res.json(),
+     )
       .subscribe(data => (console.log(data)),
         error => this.LoginErrorMessage(), // if server status null , show alert message
         () => this.successMessage());
-    this.navCtrl.push(MobilePage)
 
   }
 

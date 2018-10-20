@@ -1,3 +1,4 @@
+import { MobilePage } from './../pages/mobile/mobile';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -34,6 +35,7 @@ import { RegisterPage } from '../pages/register/register';
     PlayGameJodiPage,
     LoginPage,
     RegisterPage,
+    MobilePage
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { RegisterPage } from '../pages/register/register';
     PlayGamePage,
     PlayGameJodiPage,
     LoginPage,
+    MobilePage,
     RegisterPage
   ],
   providers: [
