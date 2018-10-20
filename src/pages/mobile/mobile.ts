@@ -1,13 +1,11 @@
-import { MobilePage } from './../mobile/mobile';
+import { LoginPage } from './../login/login';
+import { Http, Headers, Response } from '@angular/http';
+import { Storage } from '@ionic/storage';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { Response, Http, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { LoginPage } from '../login/login';
 
 /**
- * Generated class for the RegisterPage page.
+ * Generated class for the MobilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -15,25 +13,18 @@ import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-register',
-  templateUrl: 'register.html',
+  selector: 'page-mobile',
+  templateUrl: 'mobile.html',
 })
-export class RegisterPage {
-  private reigsterForm : FormGroup;
+export class MobilePage {
+  mobile: any;
 
-  userName: any;
-  emailId: any;
-  password: any;
-  constructor(public toastr: ToastController,public http: Http, private formBuilder: FormBuilder ,public navCtrl: NavController, public navParams: NavParams) {
-    this.reigsterForm = this.formBuilder.group({
-      userName: ['', Validators.required],
-      emailId: ['', Validators.required],
-      password: ['', Validators.required]
-    });
+  constructor(public toastr: ToastController,public storage: Storage,public navCtrl: NavController, public navParams: NavParams, public http: Http) {
   }
 
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RegisterPage');
+    console.log('ionViewDidLoad MobilePage');
   }
 
   successMessage() {
@@ -64,13 +55,10 @@ export class RegisterPage {
   }
 
   register(){
-    console.log(this.reigsterForm.value)
     var headers = new Headers();
     this.http.post('http://serverside.pythonanywhere.com/api/users',
         {
-          username: this.reigsterForm.value.userName,
-          email: this.reigsterForm.value.emailId,
-          password: this.reigsterForm.value.password
+          username: this.mobile
 
         }, {
           headers: headers
@@ -79,7 +67,7 @@ export class RegisterPage {
       .subscribe(data => (console.log(data)),
         error => this.LoginErrorMessage(), // if server status null , show alert message
         () => this.successMessage());
-    this.navCtrl.push(MobilePage)
+    this.navCtrl.push(LoginPage)
 
   }
 
